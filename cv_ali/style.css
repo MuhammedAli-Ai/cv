@@ -1,0 +1,119 @@
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  padding: 150px;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  margin-top: 12%;
+  border-radius: 50%;
+  border: 3px solid #00aeff;
+  margin-bottom: 25px;
+}
+
+.resume-container {
+  display: flex;
+  background-color: #000000b8;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: #022332ce;
+  animation: blue-loading 3s infinite linear;
+  overflow: hidden; /* Ensure content fits */
+}
+
+.left-section {
+  background-color: black;
+  color: #00aeff;
+  padding: 20px;
+  width: 35%;
+  text-align: center;
+  border: 2px solid blue;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.6);
+}
+
+h3 {
+  font-size: medium;
+  padding: 2px;
+  margin: 20px 0 10px;
+  color: #00aeff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00aeff;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.p {
+  text-align: justify;
+  color: #ffffff;
+}
+
+.right-section {
+  width: 50%;
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Animation for the resume container */
+@keyframes blue-loading {
+0% {
+  border-color: transparent;
+  box-shadow: 0 0 0 0 rgba(0, 0, 255, 0.8);
+}
+15% {
+  border-color: rgba(0, 0, 255, 0.769);
+  box-shadow: 0 0 20px 5px rgb(0, 255, 4);
+}
+25% {
+  border-color: rgba(255, 72, 0, 0.769);
+  box-shadow: 0 0 20px 5px rgb(0, 81, 255);
+}
+50% {
+  border-color: rgba(0, 0, 255, 0.411);
+  box-shadow: 0 0 30px 10px rgb(255, 81, 0);
+}
+75% {
+  border-color: rgba(0, 0, 255, 0.087);
+  box-shadow: 0 0 20px 5px rgb(136, 0, 255);
+}
+100% {
+  border-color: transparent;
+  box-shadow: 0 0 0 0 rgb(255, 18, 200);
+}
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  body {
+      padding: 20px;
+  }
+
+  .resume-container {
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+  }
+
+  .left-section,
+  .right-section {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box; /* Ensures padding fits within the container */
+  }
+
+  .profile-picture {
+      width: 150px;
+      height: 150px;
+      margin-top: 5%;
+  }
+
+  h3 {
+      font-size: larger;
+    }
+}
